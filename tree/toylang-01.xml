@@ -1,0 +1,9 @@
+<PROGRAM>
+    <STATEMENT>
+        <DECLARATION_STMT>
+            <var>var</var>
+            <identifier>n</identifier>
+            <semicolon>;</semicolon>
+        </DECLARATION_STMT>
+    </STATEMENT>
+</PROGRAM>

@@ -1,0 +1,7 @@
+var x;
+var y;
+input x;
+if (x > 5) {
+    y = x * (x / 2 + 10);
+}
+print "After if, finished!";

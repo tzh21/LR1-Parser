@@ -1,0 +1,27 @@
+State,$,E,F,L,comma,id,lparen,rparen
+0,,goto   3,goto   2,,,shift  1,shift  4,
+1,reduce F -> id,,,,,,,
+2,reduce E -> F,,,,,,,
+3,accept,,,,,,,
+4,,goto   6,goto   9,goto   7,,shift  8,shift  5,
+5,,goto   6,goto   10,goto   11,,shift  8,shift  5,
+6,,,,,reduce L -> E,,,
+7,,,,,shift  12,,,
+8,,,,,reduce F -> id,,,reduce F -> id
+9,,,,,reduce E -> F,,,shift  13
+10,,,,,reduce E -> F,,,shift  14
+11,,,,,shift  15,,,
+12,,goto   17,goto   18,,,shift  8,shift  16,
+13,reduce F -> lparen F rparen,,,,,,,
+14,,,,,reduce F -> lparen F rparen,,,reduce F -> lparen F rparen
+15,,goto   19,goto   18,,,shift  8,shift  16,
+16,,goto   6,goto   10,goto   20,,shift  8,shift  5,
+17,,,,,reduce L -> L comma E,,,shift  21
+18,,,,,reduce E -> F,,,reduce E -> F
+19,,,,,reduce L -> L comma E,,,shift  22
+20,,,,,shift  23,,,
+21,reduce E -> lparen L comma E rparen,,,,,,,
+22,,,,,reduce E -> lparen L comma E rparen,,,
+23,,goto   24,goto   18,,,shift  8,shift  16,
+24,,,,,reduce L -> L comma E,,,shift  25
+25,,,,,reduce E -> lparen L comma E rparen,,,reduce E -> lparen L comma E rparen

@@ -1,0 +1,26 @@
+PROGRAM -> STATEMENT PROGRAM | STATEMENT
+STATEMENT -> INPUT_STMT | PRINT_STMT | DECLARATION_STMT | ASSIGNMENT_STMT | IF_STMT | WHILE_STMT
+
+INPUT_STMT -> input identifier semicolon
+
+PRINT_STMT -> print PRINT_SUFFIX
+PRINT_SUFFIX -> identifier semicolon | string_literal semicolon
+
+DECLARATION_STMT -> var identifier semicolon
+
+ASSIGNMENT_STMT -> identifier assign EXPRESSION semicolon
+
+IF_STMT -> if lparen CONDITION rparen lbrace PROGRAM rbrace
+
+WHILE_STMT -> while lparen CONDITION rparen lbrace PROGRAM rbrace
+
+EXPRESSION -> TERM EXPRESSION_SUFFIX | TERM
+EXPRESSION_SUFFIX -> plus TERM | minus TERM
+
+TERM -> FACTOR TERM_SUFFIX | FACTOR
+TERM_SUFFIX -> multiply FACTOR | divide FACTOR
+
+FACTOR -> identifier | number | lparen EXPRESSION rparen
+
+CONDITION -> EXPRESSION CONDITION_SUFFIX
+CONDITION_SUFFIX -> equal EXPRESSION | greater EXPRESSION | less EXPRESSION

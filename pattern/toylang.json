@@ -1,0 +1,27 @@
+[
+    ["var", "var"],
+    ["if", "if"],
+    ["input", "input"],
+    ["print", "print"],
+    ["while", "while"],
+
+    ["greater", ">"],
+    ["less", "<"],
+    ["equal", "=="],
+
+    ["assign", "="],
+    ["plus", "\\+"],
+    ["minus", "\\-"],
+    ["multiply", "\\*"],
+    ["divide", "\\/"],
+
+    ["lparen", "\\("],
+    ["rparen", "\\)"],
+    ["lbrace", "\\{"],
+    ["rbrace", "\\}"],
+
+    ["semicolon", ";"],
+    ["number", "\\d+"],
+    ["identifier", "[A-Za-z_]\\w*"],
+    ["string_literal", "\".*?\""]
+]
